@@ -2,6 +2,7 @@
   <head>
     <title>Knn</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
     <style>
       canvas {
         cursor: pointer;
@@ -38,30 +39,6 @@
               <input type='range' name='k' min="1" max="7" value="3">
             </label>
           </div>
-          
-          <!-- <div class='btn-group' data-toggle='buttons'>
-            <label class='btn btn-primary btn-lg active' id='k-1-btn'>
-              <input type='radio' name='k' checked> 1
-            </label>
-            <label class='btn btn-primary btn-lg' id='k-2-btn'>
-              <input type='radio' name='k'> 2
-            </label>
-            <label class='btn btn-primary btn-lg' id='k-3-btn'>
-              <input type='radio' name='k'> 3
-            </label>
-            <label class='btn btn-primary btn-lg' id='k-4-btn'>
-              <input type='radio' name='k'> 4
-            </label>
-            <label class='btn btn-primary btn-lg' id='k-5-btn'>
-              <input type='radio' name='k'> 5
-            </label>
-            <label class='btn btn-primary btn-lg' id='k-6-btn'>
-              <input type='radio' name='k'> 6
-            </label>
-            <label class='btn btn-primary btn-lg' id='k-7-btn'>
-              <input type='radio' name='k'> 7
-            </label>
-          </div> -->
         </div>
       </div>
       <div class='row'>
@@ -79,9 +56,9 @@
             </label>
           </div>
         </div>
-        <div class='col-xs-4'>
+        <div class='col-xs-2'>
           <h3>Num points</h3>
-          <div class='btn-group' data-toggle='buttons'>
+          <div class='btn-group btns-num-points' data-toggle='buttons'>
             <label class='btn btn-primary btn-lg' id='num-pts-20-btn'>
               <input type='radio' name='num-pts'> 20
             </label>
@@ -97,6 +74,14 @@
             <label class='btn btn-primary btn-lg' id='num-pts-60-btn'>
               <input type='radio' name='num-pts'> 60
             </label>
+          </div>
+          <div class="cls-num-points">
+              <ul>
+                <li class="cls-num-0"><i class="cls-color cls-0"></i><span>0</span></li>
+                <li class="cls-num-1"><i class="cls-color cls-1"></i><span>0</span></li>
+                <li class="cls-num-2"><i class="cls-color cls-2"></i><span>0</span></li>
+                <li class="cls-num-3"><i class="cls-color cls-3"></i><span>0</span></li>
+              </ul>
           </div>
         </div>
       </div>

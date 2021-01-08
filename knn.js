@@ -16,22 +16,21 @@ function main() {
       color = Array.from(color);
       color.splice(color.length - 1, 1);
       color = color.join(' ');
-      console.log('color :>> ', color);
       let c;
       
       // 'orange', 'blue', 'green', 'purple',
       switch(color){
-        case '128 0 128': // -фиолетовый
-        c = 3;
+        case '255 165 0': // -желтый
+        c = 0;
         break;
         case '0 0 255': // -синий
         c = 1;
         break;
-        case '255 165 0': // -желтый
-        c = 0;
-        break;
         case '0 128 0': // -зеленый
         c = 2;
+        break;
+        case '128 0 128': // -фиолетовый
+        c = 3;
         break;
       }
       var xP = e.clientX - canvas.offsetLeft;
@@ -64,6 +63,13 @@ function main() {
   
     function gen_points() {
       state.points = generate_cluster_points(ctx, state.num_classes, state.num_points, state.cluster_std);
+      let cls = [0, 0, 0, 0];
+      state.points.forEach(item => {
+        $(`.cls-num-${item[2]} span`).text((i, _str) => {
+          cls[item[2]] += 1;
+          return cls[item[2]];
+        })
+      })
     }
     gen_points();
 
